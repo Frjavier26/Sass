@@ -1,0 +1,59 @@
+/* fuente */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+$font-family-base: 'Roboto', sans-serif;
+
+/* modificacion de colores */
+$primary: red;
+$secondary: rgb(255, 221, 0);
+$success: rgb(255, 115, 0);
+$warning: rgb(138, 131, 89);
+
+$theme-colors:(
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "burger": rgb(107, 68, 68)
+);
+ 
+$border-radius: 1rem !default;
+
+$spacer: 2rem !default;
+
+ /* importacion bootstrap al scss */
+ @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$tcolor: rgb(255, 115, 0);
+
+.burgerstyle{
+    background-color: $secondary;
+    text-align: center;
+    color: $tcolor;
+}
+
+.list-group-item{
+    @extend .burgerstyle;
+}
+
+.burgerstyle2{
+    background-color: $success;
+    color: $primary;
+    text-align: center;
+}
+
+.burgerstyle3{
+    color: $warning;
+    text-align: center;
+}
+.card-body{
+    @extend .burgerstyle2
+}
+
+.a{
+   color: $warning;
+}
+
+.card-body h5{
+    @extend .burgerstyle3
+}
